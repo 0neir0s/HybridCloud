@@ -1,0 +1,39 @@
+Hello, 
+
+I was able to setup and verify the configuration as asked.
+Please find below a summary describing the full list of deliverables and the actions performed to achieve them.
+
+1)Add an NTP server to the HCI Cloud Platform.
+    The cluster information for the NTP server is "pool.ntp.org", as suggested by the System Admin.
+
+2)Add a Name Server to the HCI Cloud Platform.
+    The cluster information for the domain name server uses "8.8.8.8", as suggested by the System Admin.
+
+3)Configure a managed virtual network using IPAM/DHCP in the HCI Cloud Platform.
+    The managed network (Production Network) was created for production environment with the IP Pool and Subnet mask, as suggested by the Network Operations group.
+
+4)Configure an unmanaged virtual network in the HCI Cloud Platform.
+    The unmanaged network (Development Network) was created for the development environment with the Subnet mask, as suggested by the Network Operations group.
+
+5)Add a storage container to the HCI Cloud Platform and upload Windows and Linux (CentOS) virtual disk images to the new container.
+    A storage container named "Images" was created for storing the disk images. 
+    Deployed Windows and Linux virtual machines in the "Images" storage container in HCI Cloud Platform.
+
+6)Deploy Windows and Linux virtual machines in the HCI Cloud Platform.
+    All 3 servers were created for production with designated naming convention in the managed production network
+
+7)Create virtual machine clones and change configurations in the HCI Cloud Platform.
+    All 3 servers were cloned for developed with designated naming convention in the unmanaged developed network
+
+8)Create data protection configurations to automate virtual machine snapshots.
+    "Production" protection configuration was made with scheduled backup of 1 hours for the RPO requirement.
+
+9)Perform additional tests for VM workload expansion and the ability to dynamically add resources to online virtual machines 
+    Development VMs were created using cloning which verifies the VM workload expansion.
+    Added 1 vCPU and 2GB memory to the database server in production and development dynamically, which was successful
+
+10)Perform virtual machine restoration using the data protection snapshots.
+    Final verification of the removal of a key VM and performing a full restoration was performed on the application server in production (app-prod).
+
+Yours respectfully
+Athul
