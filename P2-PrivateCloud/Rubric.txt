@@ -1,0 +1,23 @@
+Submitted blueprint with:
+
+Two SSH credentials - teccadmin and teccdba accounts
+Three VM service tiers - Load Balancer, Web tier and DB created
+One application profile - "small" profile is created
+VM and tasks follow security standards specified - separation of dba from application
+
+Submitted a blueprint with three service VM configuration of:
+
+Load balancer server software
+Web tier server software
+Database server software
+
+
+Submitted blueprint has:
+
+a web application, configured to read and write to the database
+post-deployment operation: a web-tier that scales and orchestrate updates to the load balancer configuration
+web tier scaling actions that update the load balancer configuration
+
+Submitted a blueprint with: 
+a database backup custom action, which uses the root account with end-user 
+provided password.
