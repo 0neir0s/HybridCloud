@@ -1,0 +1,26 @@
+Specifications:
+
+Blueprint - 
+Two SSH credentials - teccadmin and teccdba
+Four VM service tiers with 2 web tiers in Nutanix and AWS respectively
+VM and tasks follow security standards specified
+Two application profiles created
+Note - Additional credentials have been deleted
+
+Tiers - 
+Load Balancer on private cloud
+Web tier 1 on private cloud
+Web tier 2 on public cloud
+Database on public cloud
+
+Operations -
+a web application, configured to read and write to the database
+post-deployment operation: a web-tier that scales and orchestrate updates to the load balancer configuration
+web tier scaling actions that updates the load balancer configuration across both web tiers
+two profiles for deployment: small and medium, with specified VM resource and replicas configuration
+Note - Scaling deficiencies have been corrected based on previous feedback
+
+Database - 
+Database backup custom action, adapted from the source code MySQL_backup_file.sh.txt to use the end-user, runtime specified password for the database root account
+Database restore custom action, adapted from the source code MySQL_restore.sh.txt to use the end-user, runtime specified password for the database root account.
+
